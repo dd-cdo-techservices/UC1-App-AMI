@@ -1,15 +1,15 @@
 {
     "variables": {
-        "region":         "ap-south-1",
-                "aws_subnet_id": "subnet-0a8cea5591742c204",
-        "aws_vpc_id": "vpc-0d344d8f40eb95322",
+        "region":         "us-east-1",
+                "aws_subnet_id": "subnet-0fdd1da8c6b76e2af",
+        "aws_vpc_id": "vpc-00e2284bbb39d5a29",
         "aws_ami_name": "uc-one-javaub-{{timestamp}}"
     },
     "builders": [
         {
             "ami_name": "{{user `aws_ami_name`}}",   
    "instance_type": "t2.micro",
-            "region": "ap-south-1",
+            "region": "us-east-1",
          
 		"source_ami_filter": {
    "filters": {
@@ -23,7 +23,7 @@
     "most_recent": true
    },
 	  "encrypt_boot": true,
-	  "kms_key_id": "arn:aws:kms:ap-south-1:574515450298:key/834f4257-2782-4703-99ec-57f673dc3a6b",
+	  "kms_key_id": "arn:aws:kms:us-east-1:574515450298:key/834f4257-2782-4703-99ec-57f673dc3a6b",
             "vpc_id": "{{user `aws_vpc_id`}}",
             "subnet_id": "{{user `aws_subnet_id`}}",
                         "associate_public_ip_address": "true",
