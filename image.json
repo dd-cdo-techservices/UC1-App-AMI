@@ -23,7 +23,7 @@
     "most_recent": true
    },
 	  "encrypt_boot": true,
-	  "kms_key_id": "arn:aws:kms:us-east-1:574515450298:key/834f4257-2782-4703-99ec-57f673dc3a6b",
+	  "kms_key_id": "arn:aws:kms:us-east-1:034644439020:key/44af12df-17de-4cdc-9ede-bd5c8b125fb3",
             "vpc_id": "{{user `aws_vpc_id`}}",
             "subnet_id": "{{user `aws_subnet_id`}}",
                         "associate_public_ip_address": "true",
