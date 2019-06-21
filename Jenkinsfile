@@ -19,6 +19,12 @@ pipeline {
     stage('Image Build & Encrypt') {
       steps {
         sh '/usr/bin/packer build image.json'
+	      
+      }
+    }
+	   stage('Results') {
+      steps {
+        hygieiaBuildPublishStep buildStatus: 'Success'
 	      cleanWs()
       }
     }
